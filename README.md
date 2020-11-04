@@ -32,7 +32,7 @@ It was very suprising for me, but people from communities from whole world start
 
 I mention you guys because you gave me much power, and it was the begining of my programmer career.
 
-### But it also was stealed
+### But it also was stolen
 I am happy that even germans wanted to steal my work. https://swedroid.se/forum/threads/official-hazard17s-lg-g2-toolkit-v1-5-windows.109153/ Autor of this post introduced him self as me. 🤣 I'm not angry it's funny for me that this app was so prestige that everyone wanted to be Alligator Toolkit's author. 😂
 
 ### Toolkit v2 - Delphi Engine
