@@ -43,4 +43,15 @@ This version of toolkit was revolutionary - now there was GUI (Win Forms) and it
 
 ### There are many tutorials for my app, not created by me
 I'm very proud that people from whole world used my app, that people from whole world was writting tutorials based on my app!
-* 
+* https://www.download.net.pl/jak-zrobic-root-w-lg-g2-android-lollipop/n/9633/
+* http://master-gadgets.ru/kak-sdelat-koren-v-lg-g2-android-lollipop
+* https://forum.android.com.pl/topic/178043-poradniklg-d802nie-mam-%C5%BCadnego-romu-na-telefonie-czyli-wgrywanie-romu-przez-sideload/?
+
+### Official Alligator Toolkit's threads
+* https://forum.android.com.pl/topic/160495-toolkitdev-acpllg-g2-alligator-toolkit-v31-31-sierpie%C5%84-2016/
+* https://forum.xda-developers.com/showthread.php?t=2692204
+
+### Credits :)
+I wrote this app long ago, but I still remember about people who helped me the most!
+* szymel00 (forum.android.com.pl) - Jeżeli to Krzysiu przeczytasz, dziękuję!
+* yetii (forum.android.com.pl) - Dzięki Wojtek za zarażenie mnie miłością do C#!
