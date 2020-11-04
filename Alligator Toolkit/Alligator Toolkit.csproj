@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{71092D20-FB09-4A2E-984E-36134C94173F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Alligator_Toolkit</RootNamespace>
+    <AssemblyName>Alligator Toolkit</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\NarzędziaAlligator.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\adb.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alligator Console.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlligatorBootloaderMeta.zip" />
+    <None Include="Resources\Beta.alg" />
+    <None Include="Resources\BTWRP.img" />
+    <None Include="Resources\bumper.zip" />
+    <None Include="Resources\busybox" />
+    <None Include="Resources\datroot.zip" />
+    <None Include="Resources\enterDownload" />
+    <None Include="Resources\g2_security" />
+    <None Include="Resources\installRoot" />
+    <None Include="Resources\killer.zip" />
+    <None Include="Resources\leaveDownload" />
+    <None Include="Resources\LG Root Script.bat" />
+    <None Include="Resources\LGDriver.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlligatorUSB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlligatorWiFi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jos--Mourinho-said-despit-003.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coonectedNOTok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coonectedok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg_root.sh" />
+    <None Include="Resources\NarzędziaAlligator.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OneClick.bat" />
+    <None Include="Resources\PhilZ.img" />
+    <None Include="Resources\reboot" />
+    <None Include="Resources\recovery.img" />
+    <None Include="Resources\root" />
+    <None Include="Resources\su" />
+    <None Include="Resources\Superuser.apk" />
+    <None Include="Resources\ToolkitInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UPDATE-SuperSU-v2.46.zip" />
+    <None Include="Resources\VRE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recovegator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MocherowyDroid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FransuaDroid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TWRPMan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zbityDroid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReFransuaDroid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G2AndroPhone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlligatorKapelusznik.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlligatorFTPLibary.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AlligatorFTPLibary.dll" />
+    <Content Include="Resources\BatchScriptCreator.dll" />
+    <Content Include="Resources\InternetConnection.dll" />
+    <None Include="Resources\LGOneClickRoot.exe" />
+    <None Include="Resources\Alligator Bricks.png" />
+    <None Include="Resources\Android budowlaniec.png" />
+    <None Include="Resources\roots.png" />
+    <None Include="Resources\Send_Command.exe" />
+    <None Include="Resources\android_marshmallow_6-wide.jpg" />
+    <None Include="Resources\w-6237.jpg" />
+    <None Include="Resources\android-marshmallow-wallpaper-5.jpg" />
+    <None Include="Resources\donate.jpg" />
+    <None Include="Resources\jose19.jpg" />
+    <None Include="Resources\jose18.jpg" />
+    <None Include="Resources\jose17.jpg" />
+    <None Include="Resources\jose16.jpg" />
+    <None Include="Resources\jose15.jpg" />
+    <None Include="Resources\jose13.jpg" />
+    <None Include="Resources\jose12.jpg" />
+    <None Include="Resources\jose11.jpg" />
+    <None Include="Resources\jose10.jpg" />
+    <None Include="Resources\jose9.jpg" />
+    <None Include="Resources\jose8.jpg" />
+    <None Include="Resources\jose7.jpg" />
+    <None Include="Resources\jose5.jpg" />
+    <None Include="Resources\jose4.jpg" />
+    <None Include="Resources\jose3.jpg" />
+    <None Include="Resources\jose2.jpg" />
+    <None Include="Resources\jose1.jpg" />
+    <None Include="Resources\jose0.jpg" />
+    <None Include="Resources\JoseSong.wav" />
+    <None Include="Resources\Hydra Downloader.exe" />
+    <None Include="Resources\DownloadAlligator.png" />
+    <None Include="Resources\DownloadAlligator.ico" />
+    <None Include="Resources\Bez nazwy-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="NETWORKLIST">
+      <Guid>{DCB00D01-570F-4A9B-8D69-199FDBA5723B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,120 @@
+# root installer for LG (lollipop only)
+#
+# by digital-bug @XDA
+#
+# Usage: Send_Command.exe \\.\COMx < root
+#
+
+cp /data/local/tmp/busybox /
+chmod 0755 /busybox
+
+/busybox echo -e \n\nroot installer for LG (lollipop)\n..... by digital-bug @XDA\n
+
+/busybox echo -e \n\nremounting /system (rw)\n
+
+# the trick for remount /system as read-write. some roms need this.
+mount -o remount,rw /system
+/busybox umount /system
+/busybox mount -w /dev/block/platform/msm_sdcc.1/by-name/system /system
+
+/busybox echo -e \n\nextracting SuperSU\n
+
+mkdir /data/local/tmp/supersu
+/busybox unzip -q /data/local/tmp/UPDATE-SuperSU-v2.46.zip -d /data/local/tmp/supersu
+
+/busybox echo -e \n\ninstalling SuperSU\n
+
+mkdir /system/app/SuperSU
+chmod 0755 /system/app/SuperSU
+chown 0.0 /system/app/SuperSU
+chcon u:object_r:system_file:s0 /system/app/SuperSU
+
+cp /data/local/tmp/supersu/common/Superuser.apk /system/app/SuperSU/SuperSU.apk
+chmod 0644 /system/app/SuperSU/SuperSU.apk
+chown 0.0 /system/app/SuperSU/SuperSU.apk
+chcon u:object_r:system_file:s0 /system/app/SuperSU/SuperSU.apk
+
+cp /data/local/tmp/supersu/common/install-recovery.sh /system/etc/install-recovery.sh
+chmod 0755 /system/etc/install-recovery.sh
+chown 0.0 /system/etc/install-recovery.sh
+chcon u:object_r:toolbox_exec:s0 /system/etc/install-recovery.sh
+
+rm /system/bin/install-recovery.sh
+ln -s /system/etc/install-recovery.sh /system/bin/install-recovery.sh
+
+mkdir /system/bin/.ext
+chmod 0755 /system/bin/.ext
+chown 0.0 /system/bin/.ext
+chcon u:object_r:system_file:s0 /system/bin/.ext
+
+cp /data/local/tmp/supersu/armv7/su /system/xbin/su
+chmod 0755 /system/xbin/su
+chown 0.0 /system/xbin/su
+chcon u:object_r:system_file:s0 /system/xbin/su
+
+cp /data/local/tmp/supersu/armv7/su /system/bin/.ext/.su
+chmod 0755 /system/bin/.ext/.su
+chown 0.0 /system/bin/.ext/.su
+chcon u:object_r:system_file:s0 /system/bin/.ext/.su
+
+cp /data/local/tmp/supersu/armv7/su /system/xbin/daemonsu
+chmod 0755 /system/xbin/daemonsu
+chown 0.0 /system/xbin/daemonsu
+chcon u:object_r:system_file:s0 /system/xbin/daemonsu
+
+cp /data/local/tmp/supersu/armv7/su /system/xbin/sugote
+chmod 0755 /system/xbin/sugote
+chown 0.0 /system/xbin/sugote
+chcon u:object_r:zygote_exec:s0 /system/xbin/sugote
+
+cp /data/local/tmp/supersu/armv7/supolicy /system/xbin/supolicy
+chmod 0755 /system/xbin/supolicy
+chown 0.0 /system/xbin/supolicy
+chcon u:object_r:system_file:s0 /system/xbin/supolicy
+
+cp /data/local/tmp/supersu/armv7/libsupol.so /system/lib/libsupol.so
+chmod 0644 /system/lib/libsupol.so
+chown 0.0 /system/lib/libsupol.so
+chcon u:object_r:system_file:s0 /system/lib/libsupol.so
+
+cp /system/bin/sh /system/xbin/sugote-mksh
+chmod 0755 /system/xbin/sugote-mksh
+chown 0.0 /system/xbin/sugote-mksh
+chcon u:object_r:system_file:s0 /system/xbin/sugote-mksh
+
+cp /system/bin/app_process32 /system/bin/app_process32_original
+chmod 0755 /system/bin/app_process32_original
+chown 0.0 /system/bin/app_process32_original
+chcon u:object_r:zygote_exec:s0 /system/bin/app_process32_original
+
+cp /system/bin/app_process32 /system/bin/app_process_init
+chmod 0755 /system/bin/app_process_init
+chown 0.2000 /system/bin/app_process_init
+chcon u:object_r:system_file:s0 /system/bin/app_process_init
+
+rm /system/bin/app_process
+rm /system/bin/app_process32
+
+ln -s /system/xbin/daemonsu /system/bin/app_process
+ln -s /system/xbin/daemonsu /system/bin/app_process32
+
+touch /system/etc/.installed_su_daemon
+chmod 0644 /system/etc/.installed_su_daemon
+chown 0.0 /system/etc/.installed_su_daemon
+chcon u:object_r:system_file:s0 /system/etc/.installed_su_daemon
+
+/system/xbin/su --install
+
+/busybox echo -e \n\nremounting /system (ro)\n
+
+/busybox umount /system
+/busybox mount -r /dev/block/platform/msm_sdcc.1/by-name/system /system
+
+/busybox echo -e \n\ncleanup\n
+
+rm /data/local/tmp/busybox
+rm /data/local/tmp/UPDATE-SuperSU-v2.46.zip
+rm -fr /data/local/tmp/supersu
+
+/busybox echo -e \n\ndone!\nplease press control+c to exit...\n
+LEAVE
