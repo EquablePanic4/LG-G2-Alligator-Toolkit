@@ -41,7 +41,7 @@ Second toolkit was better - it had closed source (written in Delphi and compiled
 ### Toolkit v3.0 - .NET Engine and C# powered
 This version of toolkit was revolutionary - now there was GUI (Win Forms) and it was very user friendly. This was my first big project in .NET - when I finished Toolkit (version 3.1 was the last one) I decided to continue learning .NET and C# (and it was best decision in my life). I'm terrified when I think that I could became for example Java Developer 😵. Source code of the last version is availble here. 🙂
 
-### There are many tutorials for my app, not created by me
+### There are many tutorials based on my app, not created by me
 I'm very proud that people from whole world used my app, that people from whole world was writting tutorials based on my app!
 * https://www.download.net.pl/jak-zrobic-root-w-lg-g2-android-lollipop/n/9633/
 * http://master-gadgets.ru/kak-sdelat-koren-v-lg-g2-android-lollipop
